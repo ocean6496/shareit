@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase / 
+#viet luat cho cac duong dan cua du an
+
+RewriteRule ^lien-he$ /contact.php
+
+#index.php?page=3 =>page/1
+RewriteRule ^page/([0-9*])$ index.php?page=$1
+
+#detail.php?id=32 => /detail/toi-nhu-anh-duong-ruc-ro-32.html
+RewriteRule ^chi-tiet/(.*)-([0-9]*).html$ /detail.php?id=$2
+
+# /cat/the-thao-5/page/3
+RewriteRule ^danh-muc/(.*)-([0-9]*)/page-([0-9]+).html$ /cat.php?id=$2&page=$3
+
+RewriteRule ^danh-muc/(.*)-([0-9]*).html$ /cat.php?id=$2
