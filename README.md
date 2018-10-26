@@ -1,1 +1,1 @@
-# shareit
+# shareit - project in Vinenter Edu
